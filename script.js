@@ -11,12 +11,12 @@
 
 // Constants
 const appID = "app";
-const headingText = "To do. To done. ✅";
+const headingText = "This is my ToDoList";
 
 // DOM Elements
 let appContainer = document.getElementById(appID);
-
 //
+
 // Functions
 //
 
