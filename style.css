@@ -1,61 +1,44 @@
-
 /*
  * CORE STYLES
  */
 
-html {
+ html {
   font-size: 1.2rem;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--body-default-colour);
-  background-color:#2C1B47;
+  background-color: #2C1B47;
   display: flex;
   justify-content: center;
   align-items: center;
- 
 }
-
 
 main {
   margin: 0 1.3rem 5rem 1.3rem;
 }
 
-
-
 h1 {
-  color:white;
+  color: white;
   font-size: 4.0rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-h {
-  color: var( --body-heading-colour);
-  font-size: 0.9rem;
-}
-
 section {
   padding: 4rem 0;
 }
 
-
-
-/*
- * FORM EXAMPLE
- */
-
 .form-example {
-  background-color:#724C9D;
+  background-color: #724c9d;
   border: 1px solid rgba(27, 31, 35, 0.15);
   border-radius: 6px;
   box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
   border-radius: 1rem;
   padding: 1rem;
   margin: 12rem 0;
-
 }
 
 .form-example form {
@@ -74,21 +57,8 @@ section {
   font-weight: bold;
 }
 
-.form-results li {
-  list-style: none;
-  font-size: medium;
-  padding: 12px 8px 12px 50px;
-  user-select: none;
-  cursor: pointer;
-  background-color:#9356A0;
-  border: 1px solid #0a7ef226;
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-}
-
 .results {
-  color:#fff;
+  color: #fff;
   padding: 1rem;
 }
 
@@ -99,12 +69,10 @@ section {
   margin-bottom: 2.5rem;
 }
 
-
-
 .btn-primary {
   margin: 1rem 0;
   appearance: none;
-  background-color:#9356A0;
+  background-color: #9356a0;
   border: 1px solid #0a7ef226;
   border-radius: 6px;
   box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
@@ -114,57 +82,40 @@ section {
   line-height: 20px;
   padding: 10px 16px;
   text-align: center;
-  
 }
-
 
 .btn-primary:hover {
-  background-color:#61269a;
+  background-color: #61269a;
 }
 
-
-
-/* media Responsive Design
-*/
-
-@media (max-width: 767px) {
-  main {
-  min-height: auto;
-}
+/* Added styles for the Lists */
+.results h2 {
+  text-align: center;
 }
 
-
-
-  @media (min-width: 768px) and (max-width: 1023px) {
-  #app {
-  max-width: 80%;
-  }
-}
-  @media (min-width: 1024px) {
-  #app {
-  max-width: 60%;
-  }
-}
-
-/*
- SCREEN READER UTILITY
-*/
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+.form-results li {
+  margin: 1rem 0;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: medium;
+  text-align: center;
+  list-style: none;
+  background-color: #9356a0;
+  border: 1px solid #0a7ef226;
+  justify-content: space-between;
+  display: flex;
 }
 
+/* Styling for the container of the Lists */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-
-
-span{
+/* Styling for the animation */
+span {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -172,10 +123,11 @@ span{
   height: 4px;
   background: #fff;
   border-radius: 50%;
-  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 1)  ;
-  animation:  animate 3s linear infinite;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 1);
+  animation: animate 3s linear infinite;
 }
-span::before{
+
+span::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -185,105 +137,95 @@ span::before{
   background: linear-gradient(90deg, #fff, transparent);
 }
 
-/* key frames */
 @keyframes animate {
-  0%
-  {
-      transform: rotate(315deg) translateX(0);
-      opacity: 1;
+  0% {
+    transform: rotate(315deg) translateX(0);
+    opacity: 1;
   }
-  70%
-  {
-      opacity: 1;
-
+  70% {
+    opacity: 1;
   }
-  100%
-  {
-      transform: rotate(315deg) translateX(-1500px);
-      opacity: 0;
-
+  100% {
+    transform: rotate(315deg) translateX(-1500px);
+    opacity: 0;
   }
-  
 }
 
-
-
-
-span:nth-child(1){
+span:nth-child(1) {
   top: 0;
   right: 0;
-  left:initial;
-  animation-delay:0 ;
+  left: initial;
+  animation-delay: 0;
   animation-duration: 1s;
 }
 
-span:nth-child(2){
+span:nth-child(2) {
   top: 0;
   right: 80px;
-  left:initial;
-  animation-delay:0.2s;
+  left: initial;
+  animation-delay: 0.2s;
   animation-duration: 3s;
 }
 
-span:nth-child(3){
+span:nth-child(3) {
   top: 80px;
   right: 0px;
-  left:initial;
-  animation-delay:0.4s ;
+  left: initial;
+  animation-delay: 0.4s;
   animation-duration: 2s;
 }
 
-span:nth-child(4){
+span:nth-child(4) {
   top: 0;
   right: 180px;
-  left:initial;
-  animation-delay:0.6s;
+  left: initial;
+  animation-delay: 0.6s;
   animation-duration: 1.5s;
 }
 
-span:nth-child(5){
+span:nth-child(5) {
   top: 0;
   right: 400px;
-  left:initial;
-  animation-delay:0.8s;
+  left: initial;
+  animation-delay: 0.8s;
   animation-duration: 2.5s;
 }
 
-span:nth-child(6){
+span:nth-child(6) {
   top: 0;
   right: 600px;
-  left:initial;
-  animation-delay:1s ;
+  left: initial;
+  animation-delay: 1s;
   animation-duration: 3s;
 }
-span:nth-child(7 ){
+span:nth-child(7) {
   top: 300px;
   right: 0px;
-  left:initial;
-  animation-delay:1s ;
+  left: initial;
+  animation-delay: 1s;
   animation-duration: 1.75s;
 }
 
-span:nth-child(8){
+span:nth-child(8) {
   top: 0px;
   right: 700px;
-  left:initial;
-  animation-delay:1.4s ;
+  left: initial;
+  animation-delay: 1.4s;
   animation-duration: 1.25s;
 }
 
-span:nth-child(9){
+span:nth-child(9) {
   top: 0px;
   right: 1000px;
-  left:initial;
-  animation-delay:0.75s ;
+  left: initial;
+  animation-delay: 0.75s;
   animation-duration: 2.25s;
 }
 
 span:nth-child(10){
-  top: 0px;
-  right: 1000px;
-  left:initial;
-  animation-delay:2.75s ;
-  animation-duration: 2.25s;
+  top: 300px;
+  right: 600px;
+  left: initial;
+  animation-delay: 1.8s;
+  animation-duration: 2.75s;
 }
