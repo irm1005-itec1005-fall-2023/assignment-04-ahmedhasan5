@@ -98,7 +98,7 @@ section {
   padding: 10px 16px;
   border-radius: 10px;
   font-size: 1rem;
-  font-weight: medium;
+  font-weight:200;
   text-align: center;
   list-style: none;
   background-color: #9356a0;
@@ -155,7 +155,7 @@ span:nth-child(1) {
   top: 0;
   right: 0;
   left: initial;
-  animation-delay: 0;
+  animation-delay:0ms;
   animation-duration: 1s;
 }
 
