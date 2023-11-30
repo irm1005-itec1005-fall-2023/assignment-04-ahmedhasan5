@@ -1,56 +1,231 @@
 /*
- * CSS File for the solution
- * Assignment 03
- * You can modify these styles but you don't have to
+ * CORE STYLES
  */
 
-/*
- VARIABLES
-*/
-:root {
-  /* Core colours */
-  /* https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557 */
-  --colour-amaranth: #e63946;
-  --colour-peppermint: #f1faee;
-  --colour-aquaisland: #a8dadc;
-  --colour-wedgewood: #457b9d;
-  --colour-cello: #1d3557;
-
-  /* Header configuration */
-  --header-heading-colour: var(--colour-peppermint);
-
-  /* Body configuration */
-  --body-default-colour: var(--colour-cello);
-  --body-background-colour: var(--colour-peppermint);
+ html {
+  font-size: 1.2rem;
 }
 
-/*
-  PAGE / BODY
-*/
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--body-default-colour);
-  background-color: var(--body-background-colour);
-}
-
-main {
-  min-height: 100vh;
-
+  background-color: #2C1B47;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+main {
+  margin: 0 1.3rem 5rem 1.3rem;
+}
 
-/****** Screen reader text utility clsas *******/
-.sr-only {
+h1 {
+  color: white;
+  font-size: 4.0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+.form-example {
+  background-color: #724c9d;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 12rem 0;
+}
+
+.form-example form {
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 1rem 0;
+  color: #fff;
+  background-color: var(--colour-blue-700);
+  display: flex;
+  flex-direction: column;
+}
+
+.form-example form label {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.results {
+  color: #fff;
+  padding: 1rem;
+}
+
+.results p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.btn-primary {
+  margin: 1rem 0;
+  appearance: none;
+  background-color: #9356a0;
+  border: 1px solid #0a7ef226;
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 10px 16px;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background-color: #61269a;
+}
+
+/* Added styles for the Lists */
+.results h2 {
+  text-align: center;
+}
+
+.form-results li {
+  margin: 1rem 0;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight:200;
+  text-align: center;
+  list-style: none;
+  background-color: #9356a0;
+  border: 1px solid #0a7ef226;
+  justify-content: space-between;
+  display: flex;
+}
+
+/* Styling for the container of the Lists */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling for the animation */
+span {
   position: absolute;
-  width: 1px;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 1);
+  animation: animate 3s linear infinite;
+}
+
+span::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
   height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+  background: linear-gradient(90deg, #fff, transparent);
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(315deg) translateX(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(315deg) translateX(-1500px);
+    opacity: 0;
+  }
+}
+
+span:nth-child(1) {
+  top: 0;
+  right: 0;
+  left: initial;
+  animation-delay:0ms;
+  animation-duration: 1s;
+}
+
+span:nth-child(2) {
+  top: 0;
+  right: 80px;
+  left: initial;
+  animation-delay: 0.2s;
+  animation-duration: 3s;
+}
+
+span:nth-child(3) {
+  top: 80px;
+  right: 0px;
+  left: initial;
+  animation-delay: 0.4s;
+  animation-duration: 2s;
+}
+
+span:nth-child(4) {
+  top: 0;
+  right: 180px;
+  left: initial;
+  animation-delay: 0.6s;
+  animation-duration: 1.5s;
+}
+
+span:nth-child(5) {
+  top: 0;
+  right: 400px;
+  left: initial;
+  animation-delay: 0.8s;
+  animation-duration: 2.5s;
+}
+
+span:nth-child(6) {
+  top: 0;
+  right: 600px;
+  left: initial;
+  animation-delay: 1s;
+  animation-duration: 3s;
+}
+span:nth-child(7) {
+  top: 300px;
+  right: 0px;
+  left: initial;
+  animation-delay: 1s;
+  animation-duration: 1.75s;
+}
+
+span:nth-child(8) {
+  top: 0px;
+  right: 700px;
+  left: initial;
+  animation-delay: 1.4s;
+  animation-duration: 1.25s;
+}
+
+span:nth-child(9) {
+  top: 0px;
+  right: 1000px;
+  left: initial;
+  animation-delay: 0.75s;
+  animation-duration: 2.25s;
+}
+
+span:nth-child(10){
+  top: 300px;
+  right: 600px;
+  left: initial;
+  animation-delay: 1.8s;
+  animation-duration: 2.75s;
 }
